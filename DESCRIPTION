@@ -1,0 +1,20 @@
+Package: compoundCollection
+Title: Annotation and Structure Collection of Small Molecules
+Version: 0.99.0
+Authors@R: 
+    person("Yuzhu", "Duan",
+           role = c("aut", "cre"),
+           email = "yduan004@ucr.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package contains annotation and structures of drugs/small
+    molecules in DrugAge, DrugBank, CMAP02 and LINCS databases, it also supports
+    adding custom compound collections.
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: true
+Depends: R(>= 3.6.0)
+Imports: readr, dplyr
+Suggests: knitr, testthat, rmarkdown, BiocStyle
+biocViews: Software
+URL: https://github.com/yduan004/compoundCollection/
+BugReports: https://github.com/yduan004/compoundCollection/issues
