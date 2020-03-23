@@ -13,8 +13,9 @@ License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true
 Depends: R(>= 3.6.0)
-Imports: readr, dplyr
+Imports: readr, dplyr, RSQLite
 Suggests: knitr, testthat, rmarkdown, BiocStyle
 biocViews: Software
 URL: https://github.com/yduan004/compoundCollection/
 BugReports: https://github.com/yduan004/compoundCollection/issues
+RoxygenNote: 7.1.0
