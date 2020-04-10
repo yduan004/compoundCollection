@@ -1,4 +1,4 @@
-# customCompoundDB: Cutsomize and Query Compound Annotation Database
+# customCompoundDB: Customize and Query Compound Annotation Database
 
 ## Introduction
 
