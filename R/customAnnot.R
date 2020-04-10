@@ -1,4 +1,4 @@
-#' Add/Delete Cutsom Annotation
+#' Add/Delete Custom Annotation
 #'
 #' Functions could be used to add/delete user's custom compound annotations
 #' to the annotation SQLite database in the

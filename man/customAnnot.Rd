@@ -6,7 +6,7 @@
 \alias{deleteAnnot}
 \alias{listAnnot}
 \alias{defaultAnnot}
-\title{Add/Delete Cutsom Annotation}
+\title{Add/Delete Custom Annotation}
 \usage{
 addCustomAnnot(annot_tb, annot_name)
 

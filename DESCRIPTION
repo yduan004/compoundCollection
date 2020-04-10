@@ -7,11 +7,12 @@ Authors@R:
            comment = c(ORCID = "YOUR-ORCID-ID")),
       person("Thomas", "Girke", email = "thomas.girke@ucr.edu", 
            role = "aut"))
-Description: This software package is the query interface for the corresponding
-    compoundCollectionData package. It contains utilities to query the compound 
+Description: This software package is the customization and query interface 
+    for the annotation SQLite database from the corresponding
+    compoundCollectionData package. It provides utilities to query the compound 
     annotations from DrugAge, DrugBank, CMAP02 and LINCS resources by providing 
-    ChEMBL ids of the query compounds. It also supports adding custom compound 
-    annotations to the annotation SQLite database.
+    ChEMBL ids of the query compounds. It also supports adding customized
+    compound annotations to the annotation SQLite database.
 License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true

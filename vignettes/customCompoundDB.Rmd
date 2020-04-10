@@ -32,16 +32,17 @@ Rscript -e "rmarkdown::render('customCompoundDB.Rmd',
 
 # Introduction
 
-This software package is the query interface for the corresponding
+This software package is the customization and query interface for the
+annotation SQLite database from the corresponding
 [compoundCollectionData](https://github.com/yduan004/compoundCollectionData) package.
-It contains utilities to query the compound annotations from 
+It provides utilities to query the compound annotations from 
 [DrugAge](https://genomics.senescence.info/drugs/), 
 [DrugBank](https://www.drugbank.ca/),
 [CMAP02](https://portals.broadinstitute.org/cmap/),
 and [LINCS](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742) 
-databases by providing ChEMBL ids of the query compounds.
+resources by providing ChEMBL ids of the query compounds.
 It also supports adding custom compound annotations to the annotation SQLite
-database from the `compoundCollectionData` package.
+database.
 
 # Installation and Loading
 As Bioconductor package `customCompoundDB` can be installed with the 
@@ -73,7 +74,7 @@ annotdb <- ah[["AH79563"]]
 
 # Custom Annotations
 ## Add Custom Annotation
-The following shows functions used to add user's custom compound annotation 
+The following shows functions used to add user's customized compound annotation 
 tables to the annotation SQLite database in the 
 `compoundCollectionData` package. In this case, users need to know the 
 corresponding ChEMBL ids of the added compounds. The added annotation table 
@@ -118,13 +119,14 @@ defaultAnnot()
 The following function can be used to query compound annotations from the default
 resources as well as the custom resources stored in the SQLite annotation
 database. The default annotation resources are `DrugAge`, `DrugBank`, `CMAP02`
-and `LINCS`. The detailed description of this SQLite database is available at the
+and `LINCS`. Detailed description of this SQLite database is available at the
 [vignette](https://www.bioconductor.org/packages/release/bioc/vignettes/compoundCollectionData/inst/doc/compoundCollectionData.html) 
-of the `compoundCollectionData` package. The custom compound 
-annotations could be added/deleted as described above. The input of the query 
-function is a set of ChEMBL IDs, it returns a data.frame storing annotations 
-of the input compounds from the selected annotation resources defined by the 
-\code{annot} argument.
+of the `compoundCollectionData` package. Users customized compound 
+annotations could be added/deleted as described above. 
+
+The input of the query function is a set of ChEMBL IDs, it returns a data.frame 
+storing annotations of the input compounds from the selected annotation 
+resources defined by the \code{annot} argument.
 ```{r query, eval=TRUE, message=FALSE}
 query_id <- c("CHEMBL1064", "CHEMBL10", "CHEMBL113", "CHEMBL1004", "CHEMBL31574")
 annot_res <- queryAnnotDB(query_id, annot=c("DrugAge", "LINCS"))

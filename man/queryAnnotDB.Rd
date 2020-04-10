@@ -20,10 +20,12 @@ data.frame of annotation result
 This function can be used to query compound annotations from the default
 resources as well as the custom resources stored in the SQLite annotation
 database. The default annotation resources are DrugAge, DrugBank, CMAP02 and
-LINCS. The detailed description of the SQLite database is available at the
+LINCS. Detailed description of the SQLite database is available at the
 corresponding \code{\link[compoundCollectionData]{compoundCollectionData}}
-package. The custom compound annotations could be added/deleted by the
+package. The customized compound annotations could be added/deleted by the
 \code{\link{customAnnot}} utilities.
+}
+\details{
 The input of this query function is a set of ChEMBL IDs, it returns a
 data.frame storing annotations of the input compounds from selected
 annotation resources defined by the \code{annot} argument.
