@@ -7,10 +7,3 @@
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
-# download and intermediate files in inst/script
-inst/script/*.gz
-inst/script/*.xls
-inst/script/*.txt
-inst/script/*.db
-inst/script/*.xml
-inst/script/*.rds

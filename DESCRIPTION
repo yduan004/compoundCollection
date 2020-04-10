@@ -1,21 +1,25 @@
-Package: compoundCollection
-Title: Annotation and Structure Collection of Small Molecules
+Package: customCompoundDB
+Title: Cutsomize and Query Compound Annotation Database
 Version: 0.99.0
 Authors@R: 
-    person("Yuzhu", "Duan",
-           role = c("aut", "cre"),
+    c(person("Yuzhu", "Duan", role = c("aut", "cre"),
            email = "yduan004@ucr.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: This package contains annotation and structures of drugs/small
-    molecules in DrugAge, DrugBank, CMAP02 and LINCS databases, it also supports
-    adding custom compound collections.
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+      person("Thomas", "Girke", email = "thomas.girke@ucr.edu", 
+           role = "aut"))
+Description: This software package is the query interface for the corresponding
+    compoundCollectionData package. It contains utilities to query the compound 
+    annotations from DrugAge, DrugBank, CMAP02 and LINCS resources by providing 
+    ChEMBL ids of the query compounds. It also supports adding custom compound 
+    annotations to the annotation SQLite database.
 License: Artistic-2.0
 Encoding: UTF-8
 LazyData: true
 Depends: R(>= 3.6.0)
-Imports: readr, dplyr, RSQLite
+Imports: RSQLite, AnnotationHub, stats
 Suggests: knitr, testthat, rmarkdown, BiocStyle
 biocViews: Software
-URL: https://github.com/yduan004/compoundCollection/
-BugReports: https://github.com/yduan004/compoundCollection/issues
+VignetteBuilder: knitr
+URL: https://github.com/yduan004/customCompoundDB/
+BugReports: https://github.com/yduan004/customCompoundDB/issues
 RoxygenNote: 7.1.0
