@@ -49,12 +49,12 @@ queryAnnotDB <- function(chembl_id,
             d.cell2, d.array3, d.perturbation_scan_id, d.vehicle_scan_id4,
             d.scanner, d.catalog_number,
             e.pert_iname, e.is_touchstone, e.inchi_key, e.pubchem_cid
-		   	FROM id_mapping AS a
-			LEFT JOIN drugAgeAnnot AS b ON a.drugage_id = b.drugage_id
-			LEFT JOIN DrugBankAnnot AS c ON a.drugbank_id = c.drugbank_id
-			LEFT JOIN cmapAnnot AS d ON a.cmap_id = d.cmap_id
-			LEFT JOIN lincsAnnot AS e ON a.lincs_id = e.lincs_id
-			WHERE a.chembl_id IN", chembl_id,
+            FROM id_mapping AS a
+            LEFT JOIN drugAgeAnnot AS b ON a.drugage_id = b.drugage_id
+            LEFT JOIN DrugBankAnnot AS c ON a.drugbank_id = c.drugbank_id
+            LEFT JOIN cmapAnnot AS d ON a.cmap_id = d.cmap_id
+            LEFT JOIN lincsAnnot AS e ON a.lincs_id = e.lincs_id
+            WHERE a.chembl_id IN", chembl_id,
             "GROUP BY a.chembl_id
             ORDER BY a.chembl_id"))
     assays <- dbFetch(query)
@@ -82,7 +82,7 @@ queryAnnotDB <- function(chembl_id,
                 " AS b ON a.", idcol, " = b.", idcol,
                 " WHERE a.chembl_id IN", chembl_id,
                 " GROUP BY a.chembl_id
-			      ORDER BY a.chembl_id"))
+                  ORDER BY a.chembl_id"))
             cust_annot <- cust_annot[, !colnames(cust_annot) %in%
                                          c("chembl_id", idcol)]
             res <- cbind(res, cust_annot)
